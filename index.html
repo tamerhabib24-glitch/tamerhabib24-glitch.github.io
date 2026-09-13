@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مسابقة اعرف واكسب v7</title>
+<title>مسابقة اعرف واكسب v8</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
 
   .logo-wrap { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:14px; position:relative; z-index:2; }
   .logo-wrap .logo-main { width:250px; height:250px; object-fit:cover; background:#fff; border-radius:24px; box-shadow:0 8px 20px rgba(0,0,0,.3),0 6px 30px rgba(245,158,11,.25); display:block; }
-  .logo-wrap .unicef { width:105px; height:auto; object-fit:contain; display:block; }
+  .logo-wrap .unicef { width:250px; height:250px; object-fit:contain; background:#fff; border-radius:24px; box-shadow:0 8px 20px rgba(0,0,0,.3),0 6px 30px rgba(245,158,11,.25); display:block; }
 
   .form-title { text-align:center; font-size:20px; font-weight:900; }
   .form-sub { text-align:center; font-size:13px; color:rgba(255,255,255,.6); font-weight:600; margin-top:6px; }
@@ -129,6 +129,13 @@
 
   .view { display:none; position:relative; }
   .view.active { display:block; }
+
+  @media (min-width:768px){
+    .phone { max-width:680px; padding:32px 28px 40px; }
+    .title-badge span { font-size:24px; }
+    .blob { display:none; }
+    .card { padding:20px; }
+  }
 </style>
 </head>
 <body>
@@ -561,7 +568,7 @@ function loop(){
 initGovs(); renderCards(); bindAdminGesture();
 
 // علامة إصدار مرئية للتأكد أن المتصفح يعرض النسخة الجديدة
-try{ document.title='مسابقة اعرف واكسب v7'; const vm=document.createElement('div'); vm.style.cssText='position:fixed;left:8px;bottom:6px;z-index:9998;font-size:10px;color:rgba(255,255,255,.45);font-weight:700;pointer-events:none;'; vm.textContent='v7'; document.body.appendChild(vm); }catch(_){}
+try{ document.title='مسابقة اعرف واكسب v8'; const vm=document.createElement('div'); vm.style.cssText='position:fixed;left:8px;bottom:6px;z-index:9998;font-size:10px;color:rgba(255,255,255,.45);font-weight:700;pointer-events:none;'; vm.textContent='v8'; document.body.appendChild(vm); }catch(_){}
 
 // ====== منع أي إزاحة أفقية (انزلاق لليمين) على الموبايل - تثبيت حتمي ======
 function lockHScroll(){
